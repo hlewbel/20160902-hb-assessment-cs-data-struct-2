@@ -58,9 +58,11 @@ def list_length(my_list):
 
     """
 
-    print len(my_list)
-
-    return list_length(len(my_list[1:])
+    # Add one to account for the item that's popped off
+    if my_list:
+        return list_length(my_list[1:]) + 1
+    else:
+        return 0
 
 
 # 4. Write a function that uses recursion to count how many nodes are in a tree.
